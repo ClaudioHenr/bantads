@@ -7,7 +7,7 @@ import { Injectable } from '@angular/core';
 export class LoginService {
   private endpointUrl = ''
 
-  //constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) { }
 
   sendDataToLogin(email: string, password: string) {
     const data = {email, password}
