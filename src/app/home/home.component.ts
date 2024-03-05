@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { HeaderComponent } from '../layout/header/header.component';
-import { LoginComponent } from '../login/login.component';
+import { LoginComponent } from '../autenticacao/login/login.component';
 
 @Component({
   selector: 'app-home',
