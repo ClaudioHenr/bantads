@@ -1,6 +1,18 @@
 # Bantads
 
+Este projeto se refere ao front end do trabalho final de Desenvolvimento de Aplicações Corporativas da UFPR.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.2.1.
+
+# Disposição dos arquivos do projeto
+
+As pastas foram criadas para que cada uma contenha os componentes necessarios para as funcionalidades de cada usuario da aplicação
+
+Exemplo:
+A pasta cliente terá
+página inicial do cliente
+página de edição
+...
 
 ## Development server
 
