@@ -12,15 +12,15 @@ export class RegisterService {
   constructor(private http: HttpClient ) { }
 
   sendDataForRegister(client: Cliente, address: Endereco) {
-    this.http.post(this.endpoint, {
-      name: client.nome,
+    const data = {
+      nome: client.nome,
       email: client.email,
       cpf: client.cpf,
-      address: client.endereco,
-      phone: client.telefone,
-      salary: client.senha
+      endereco: address,
+      telefone: client.telefone,
+      salario: client.salario
     }
-    )
+    this.http.post(this.endpoint, data)
   }
 
   // sendDataForRegister(name: string, email: string, cpf: string, phone: number, password: string) {

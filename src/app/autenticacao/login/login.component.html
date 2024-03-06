@@ -14,7 +14,7 @@
         <div class="card-footer d-flex flex-column align-items-center">
             <button class="btn btn-outline-primary w-50" (click)="submitLoginForm()" [disabled]="!loginForm.valid">Login</button>
             <br>
-            <p>Não possui um cadastro? Cadastre-se clicando <a routerLink="autocadastro">aqui</a></p>
+            <p>Não possui um cadastro? Cadastre-se clicando <a href="#" [routerLink]="['/autocadastro']">aqui</a></p>
         </div>
     </div>
 </div>
