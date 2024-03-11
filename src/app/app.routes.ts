@@ -3,12 +3,12 @@ import { TelaInicialComponent } from './components/Cliente/tela-inicial/tela-ini
 import { AutocadastroComponent } from './autenticacao/autocadastro/autocadastro.component';
 
 export const routes: Routes = [
-    {
-        path: "telainicial",
-        component: TelaInicialComponent,
-    },
-    {
-        path: "autocadastro",
-        component: AutocadastroComponent
-    }
+  {
+    path: 'cliente',
+    component: TelaInicialComponent,
+  },
+  {
+    path: 'autocadastro',
+    component: AutocadastroComponent,
+  },
 ];
