@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { MenuComponent } from './components/Cliente/menu/menu.component';
+import { MenuComponent } from './Cliente/menu/menu.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [RouterOutlet, MenuComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
 })
 export class AppComponent {
   title = 'bantads';
