@@ -1,22 +1,20 @@
-<header>
-    <h1>Bem-vindo ao Bantads</h1>
-</header>
-<section>
-    <h2>Seu Saldo</h2>
-    <p id="saldo">R$ 0,00</p>
-</section>
-<section>
-    <h2>Transações Futuras</h2>
-    <table>
-        <thead>
-            <tr>
-                <th>Data</th>
-                <th>Descrição</th>
-                <th>Valor</th>
-            </tr>
-        </thead>
-        <tbody id="transacoes-futuras">
-            <!-- As transações serão inseridas aqui -->
-        </tbody>
-    </table>
-</section>
+<div>
+    <h1>Bantads Bank</h1>
+    <h2>Dashboard do Cliente</h2>
+
+    <div>
+        <h3>Informações da Conta</h3>
+        <p>Nome do Cliente: {{ cliente.nome }}</p>
+        <p>Número da Conta: {{ cliente.numeroConta }}</p>
+        <p>Saldo: R$ {{ cliente.saldo.toFixed(2) }}</p>
+    </div>
+
+    <div>
+        <h3>Últimas Transações</h3>
+        <ul>
+            <li *ngFor="let transacao of cliente.transacoes">
+                {{ transacao.data | date: 'medium' }} - {{ transacao.descricao }}: R$ {{ transacao.valor.toFixed(2) }}
+            </li>
+        </ul>
+    </div>
+</div>
