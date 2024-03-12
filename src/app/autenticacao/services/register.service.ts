@@ -7,7 +7,7 @@ import { Endereco } from '../../shared/models/endereco.model';
   providedIn: 'root'
 })
 export class RegisterService {
-  private endpoint = ''
+  private endpoint = 'http://localhost:3000/clientes'
 
   constructor(private http: HttpClient ) { }
 
@@ -16,11 +16,16 @@ export class RegisterService {
       nome: client.nome,
       email: client.email,
       cpf: client.cpf,
-      endereco: address,
+      endereco: address.endereco,
       telefone: client.telefone,
       salario: client.salario
     }
-    this.http.post(this.endpoint, data)
+    const dadosFormatados = `Nome: ${data.nome}, Email: ${data.email}, CPF: ${data.cpf}, Endereço: ${data.endereco}, Telefone: ${data.telefone}, Salário: ${data.salario}`;
+    console.log("Enviando para gateway...", dadosFormatados);
+
+    this.http.post(this.endpoint, data).subscribe(
+      (response) => console.log("Req enviada", response)
+    )
   }
 
   // sendDataForRegister(name: string, email: string, cpf: string, phone: number, password: string) {

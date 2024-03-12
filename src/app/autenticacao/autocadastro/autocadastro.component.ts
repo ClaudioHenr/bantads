@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { FormControl, FormGroup, NgForm, ReactiveFormsModule, Validators } from '@angular/forms';
+import { FormControl, FormGroup, FormsModule, NgForm, ReactiveFormsModule, Validators } from '@angular/forms';
 import { RegisterService } from '../services/register.service';
 import { Cliente } from '../../shared/models/cliente.model';
 import { Router } from '@angular/router';
@@ -9,7 +9,8 @@ import { Endereco } from '../../shared/models/endereco.model';
   selector: 'app-autocadastro',
   standalone: true,
   imports: [
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ],
   templateUrl: './autocadastro.component.html',
   styleUrl: './autocadastro.component.css'
@@ -26,6 +27,7 @@ export class AutocadastroComponent {
   submitRegister() {
     this.registerService.sendDataForRegister(this.client, this.address)
   }
+
   // constructor(private registerService: RegisterService) {
   //   this.registerForm = new FormGroup({
   //     name: new FormControl('', Validators.required),

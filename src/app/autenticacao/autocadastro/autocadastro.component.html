@@ -18,60 +18,75 @@
                 <div class="card-body">
                     <form action="#" method="post" id="loginForm">
                         <label for="nameInput" class="form-label">Nome</label>
-                        <input type="text" formControlName="name" class="form-control"
+                        <input type="text" class="form-control" 
+                        name="nome"
                         [(ngModel)]="client.nome"
                         required
                         >
     
                         <label for="emailInput" class="form-label">Email</label>
-                        <input type="email" formControlName="email" class="form-control"
+                        <input type="email" class="form-control"
+                        name="email"
                         [(ngModel)]="client.email"
                         required
                         >
     
                         <label for="cpfInput" class="form-label">CPF</label>
-                        <input type="text" formControlName="cpf" class="form-control"
+                        <input type="text" class="form-control"
+                        name="cpf"
                         [(ngModel)]="client.cpf"
                         required
                         >
-    
-                        <label for="enderecoInput" class="form-label">Endereço</label>
-                        <input type="text" formControlName="address" class="form-control"
-                        [(ngModel)]="address.endereco"
+
+                        <!-- testando Endereco apenas como atributo de Cliente e não um objeto -->
+                        <label for="cidadeInput" class="form-label">Cidade</label>
+                        <input type="text" class="form-control"
+                        name="cidade"
+                        [(ngModel)]="address.cidade" 
                         required
                         >
-    
+
+                        <label for="enderecoInput" class="form-label">Endereço</label>
+                        <input type="text" class="form-control"
+                        name="endereco"
+                        [(ngModel)]="address.endereco" 
+                        required
+                        >
+                        
                         <label for="typeInput" class="form-label">Tipo</label>
-                        <input type="text" formControlName="type" class="form-control"
+                        <input type="text" class="form-control"
                         placeholder="Rua ou Avenida"
                         [(ngModel)]="address.tipo"
                         required
                         >
                         <div>
                             <label for="logradouro">Logradouro</label>
-                            <input type="text" formControlName="logradouro" class="form-control"
+                            <input type="text" class="form-control"
                             [(ngModel)]="address.logradouro"
                             >
                         </div>
                         <div>
                             <label for="numero">Número</label>
-                            <input type="number" formControlName="numberHome" class="form-control"
+                            <input type="number" class="form-control"
                             [(ngModel)]="address.numero"
                             >
                         </div>
     
                         <label for="phoneInput" class="form-label">Telefone</label>
-                        <input type="number" formControlName="phone" class="form-control"
+                        <input type="number" class="form-control"
+                        name="telefone"
                         [(ngModel)]="client.telefone"
                         >
     
                         <label for="salaryInput" class="form-label">Salario</label>
-                        <input type="number" formControlName="salary" class="form-control"
+                        <input type="number" class="form-control"
+                        name="salario"
                         [(ngModel)]="client.salario"
                         >
     
                         <label for="passwordInput" class="form-label">Senha</label>
-                        <input type="password" formControlName="password" class="form-control"
+                        <input type="password" class="form-control"
+                        name="senha"
                         [(ngModel)]="client.senha"
                         >
                     </form>
@@ -79,7 +94,7 @@
     
     
                 <div class="card-footer">
-                    <button class="btn btn-success" (click)="submitRegister()">Cadastrar</button>
+                    <button class="btn btn-success" (click)="submitRegister()" type="button">Cadastrar</button>
                 </div>
             </div>
         </form>
