@@ -1,50 +1,69 @@
-.container {
-    display: flex;
-    justify-content: top;
-    align-items: top;
-    padding-top: 20px;
-    /* Adicione um pouco de padding no topo */
-}
+/*--------------------------------------
+            Cadastro
+  --------------------------------------*/
 
-.logo-cadastro {
-    width: 350px;
-}
-
-.text-cadastro {
-    color: rgb(0, 0, 0);
-    text-align: top;
-    font-size: 20px;
-    font-weight: bold;
-    align-items: top;
-    justify-content: top;
-    flex-direction: row;
-    margin-bottom: 75px;
-}
-
-.left-cadastro {
-    width: 50vw;
-    height: auto;
+  body{
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
 }
 
-.right-cadastro {
-    width: 25vw;
-    height: auto;
-    display: flex;
-    justify-content: top;
-    align-items: top;
-}
-
-.card {
-    width: 150%;
-    display: flex;
-    justify-content: center;
-    align-items: top;
-    flex-direction: column;
-    padding: 5px;
-    /* Reduza o padding para diminuir a distância interna */
+#cadastro{
+    background-color: rgba(240, 248, 255, 0.882);
     border-radius: 20px;
+    width: 800px;
+    padding: 15px;
 }
+
+#cadastro input{
+    margin-bottom: 7px;
+}
+
+#cadastro h1{
+    font-size: 40px;
+    color: #e1b918;
+    font-family: 'Courier New', monospace;
+    font-weight: bolder;
+
+}
+
+#cadastro h2{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #4c4c4c;
+  font-size: 25px
+}
+
+#cadastro button{
+  margin-top: 10px;
+  margin-left: 10px;
+}
+/*--------------------------------------
+            Plano de Fundo
+  --------------------------------------*/
+
+  .gradient {
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(90deg, #8ea471, #77a8c2, #b667c2, #ba5f5f);
+    background-size: 600%;
+    animation: colors 30s ease infinite;
+  }
+
+  @keyframes colors {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  @media (max-width: 1000px) {
+    .text {
+      font-size: 1.5rem;
+      padding: 1rem 2rem;
+    }
+  }

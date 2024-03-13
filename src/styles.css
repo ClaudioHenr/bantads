@@ -1,1 +1,31 @@
 /* You can add global styles to this file, and also import other style files */
+/*--------------------------------------
+            Plano de Fundo
+  --------------------------------------*/
+
+  .gradient {
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(90deg, #8ea471, #77a8c2, #b667c2, #ba5f5f);
+    background-size: 600%;
+    animation: colors 30s ease infinite;
+  }
+
+  @keyframes colors {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  @media (max-width: 1000px) {
+    .text {
+      font-size: 1.5rem;
+      padding: 1rem 2rem;
+    }
+  }
