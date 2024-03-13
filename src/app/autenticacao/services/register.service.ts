@@ -24,7 +24,7 @@ export class RegisterService {
     console.log("Enviando para gateway...", dadosFormatados);
 
     this.http.post(this.endpoint, data).subscribe(
-      (response) => console.log("Req enviada", response)
+      (response) => console.log("Resposta recebida", response)
     )
   }
 
