@@ -63,7 +63,8 @@
               "buildTarget": "bantads:build:production"
             },
             "development": {
-              "buildTarget": "bantads:build:development"
+              "buildTarget": "bantads:build:development",
+              "proxyConfig": "./src/proxy.conf.json"
             }
           },
           "defaultConfiguration": "development"
