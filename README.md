@@ -14,6 +14,13 @@ página inicial do cliente
 página de edição
 ...
 
+# Resalvas
+Foi adicionado o arquivo proxy.conf.json devido a um erro de CORS ao tentar acessar a API
+depois foi adicionado a seguinte linha no arquivo angular.json
+
+"proxyConfig": "./src/proxy.conf.json"
+
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
