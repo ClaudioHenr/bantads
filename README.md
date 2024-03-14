@@ -20,6 +20,8 @@ depois foi adicionado a seguinte linha no arquivo angular.json
 
 "proxyConfig": "./src/proxy.conf.json"
 
+Tutorial:
+https://www.stackhawk.com/blog/angular-cors-guide-examples-and-how-to-enable-it/
 
 ## Development server
 
