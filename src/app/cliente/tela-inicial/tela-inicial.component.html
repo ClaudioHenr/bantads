@@ -1,0 +1,20 @@
+<div>
+    <h1>Bantads Bank</h1>
+    <h2>Dashboard do Cliente</h2>
+
+    <div>
+        <h3>Informações da Conta</h3>
+        <p>Nome do Cliente: {{ cliente.nome }}</p>
+        <p>Número da Conta: {{ cliente.numeroConta }}</p>
+        <p>Saldo: R$ {{ cliente.saldo.toFixed(2) }}</p>
+    </div>
+
+    <div>
+        <h3>Últimas Transações</h3>
+        <ul>
+            <li *ngFor="let transacao of cliente.transacoes">
+                {{ transacao.data | date: 'medium' }} - {{ transacao.descricao }}: R$ {{ transacao.valor.toFixed(2) }}
+            </li>
+        </ul>
+    </div>
+</div>
