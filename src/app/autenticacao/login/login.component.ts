@@ -1,13 +1,14 @@
-import { Component } from '@angular/core';
-import { EmailValidator, FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { Component, ViewChild, viewChild } from '@angular/core';
+import { EmailValidator, FormControl, FormGroup, FormsModule, NgForm, ReactiveFormsModule, Validators } from '@angular/forms';
 import { LoginService } from '../services/login.service';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-login',
   standalone: true,
   imports: [
     ReactiveFormsModule,
+    FormsModule,
     RouterLink
   ],
   providers: [
@@ -17,16 +18,11 @@ import { RouterLink } from '@angular/router';
   styleUrl: './login.component.css'
 })
 export class LoginComponent {
-  loginForm : FormGroup
+  @ViewChild('loginForm') loginForm!: NgForm
 
-  constructor(private loginService: LoginService) {
-    this.loginForm = new FormGroup({
-      email: new FormControl('', [Validators.required, Validators.email]),
-      password: new FormControl('', [Validators.required])
-    })
-  }
+  constructor(private loginService: LoginService, private route: Router) { }
 
-  submitLoginForm() {
+  submitLogin() {
     console.log(this.loginForm.value)
     this.loginService.sendDataToLogin(this.loginForm.value.email, this.loginForm.value.password)
   }

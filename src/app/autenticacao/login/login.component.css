@@ -1,0 +1,26 @@
+#login{
+    background-color: rgba(240, 248, 255, 0.882);
+    border-radius: 20px;
+    width: 600px;
+}
+
+/*imagem de login (inicio)*/
+#login-div-img img{
+    width: 100%;
+    border-radius: 20px 0px 0px 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}   
+/*imagem de login (fim)*/
+
+#login input{
+    margin-bottom: 15px;
+}
+
+#login h1{
+    margin-top: 20px;
+    font-size: 40px;
+    color: #e1b918;
+    font-family: 'Courier New', monospace;
+    font-weight: bolder;
+}
