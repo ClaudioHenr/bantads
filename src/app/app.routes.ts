@@ -1,5 +1,5 @@
 import { Routes } from '@angular/router';
-import { TelaInicialComponent } from './Cliente/tela-inicial/tela-inicial.component';
+import { TelaInicialComponent } from './cliente/tela-inicial/tela-inicial.component';
 import { AutocadastroComponent } from './autenticacao/autocadastro/autocadastro.component';
 import { LoginComponent } from './autenticacao/login/login.component';
 
