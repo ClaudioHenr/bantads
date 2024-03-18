@@ -4,16 +4,16 @@ import { AutocadastroComponent } from './autenticacao/autocadastro/autocadastro.
 import { LoginComponent } from './autenticacao/login/login.component';
 
 export const routes: Routes = [
-  {
-    path: 'cliente',
-    component: TelaInicialComponent,
-  },
-  {
-    path: 'autocadastro',
-    component: AutocadastroComponent,
-  },
-  {
-    path: 'login',
-    component: LoginComponent
-  }
+    {
+        path: "telainicial",
+        component: TelaInicialComponent,
+    },
+    {
+        path: "autocadastro",
+        component: AutocadastroComponent
+    },
+    {
+        path: "login",
+        component: LoginComponent
+    }
 ];

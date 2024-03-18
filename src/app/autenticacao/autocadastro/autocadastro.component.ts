@@ -30,5 +30,4 @@ export class AutocadastroComponent {
   submitRegister() {
     this.registerService.sendDataForRegister(this.client, this.address)
   }
-
 }

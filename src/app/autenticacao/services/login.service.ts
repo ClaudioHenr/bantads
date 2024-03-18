@@ -23,5 +23,4 @@ export class LoginService {
       (response) => console.log("Resposta de login recebida", response)
     )
   }
-
 }
