@@ -8,6 +8,7 @@ import { Endereco } from '../../shared/models/endereco.model';
 })
 export class RegisterService {
   private endpoint = 'http://localhost:3000/clientes'
+
   constructor(private http: HttpClient ) { }
   
   // Lidar com:

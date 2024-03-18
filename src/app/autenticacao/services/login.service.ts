@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { autenticacao } from '../../shared/models/autenticacao.model';
+//comentado
+//import { autenticacao } from '../../shared/models/autenticacao.model';
 
 @Injectable({
   providedIn: 'root'
@@ -12,8 +13,8 @@ export class LoginService {
 
   constructor(private http: HttpClient) { }
 
-  sendDataToLogin(auth: autenticacao) {
-    console.log(auth.login, auth.senha)
+  //comentado
+  /*async sendDataToLogin(auth: autenticacao) {
     const data = {
       email: auth.login, 
       senha: auth.senha
@@ -22,5 +23,6 @@ export class LoginService {
     this.http.post(this.endpointUrl, data).subscribe(
       (response) => console.log("Resposta de login recebida", response)
     )
-  }
+  }*/
+
 }

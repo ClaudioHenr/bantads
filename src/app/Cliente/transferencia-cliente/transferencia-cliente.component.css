@@ -1,0 +1,163 @@
+/*--------------------------------------
+            Navbar
+  --------------------------------------*/
+
+  header{
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0px 100px;
+    display: flex;
+    justify-content: space-between;
+    background: transparent;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(50px);
+  }
+  
+  header .logo{
+    font-size: 40px;
+    color: #e1b918;
+    font-family: 'Courier New', monospace;
+    font-weight: bolder;
+    text-decoration: none;
+  }
+  
+  .nav-itens{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .nav-item{
+    list-style: none;
+    margin-left: 20px;
+  }
+  
+  .nav-item a{
+    text-decoration: none;
+    padding: 6px 15px;
+    color: #ffffff;
+    border-radius: 20px;
+  }
+  
+  .nav-item a:hover, 
+  .nav-item a.ativo{
+    background: #b0900f;
+    color: rgb(255, 255, 255);
+  }
+
+  /*--------------------------------------
+            cliente-menu
+  --------------------------------------*/
+
+body{
+  background-color: #f1f3f3 !important;
+}
+
+#opcoes{
+    width: 1000px;
+    margin-top: 80px;
+}
+
+#opcoes h1{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #4f4f4f;
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+#opcoes h2{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #ffffff;
+  font-size: 20px
+}
+
+#saldo-atual{
+  background-color: rgb(129, 163, 133);
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 5px 5px 10px rgba(235, 199, 199, 0.3)
+}
+
+#saldo-atual h1{
+  font-size: 40px;
+  color: #ffffff;
+  font-family: 'Courier New', monospace;
+  font-weight: bolder;
+}
+
+#limite{
+  margin-top: 15px;
+  background-color: rgb(230, 192, 104);
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 5px 5px 10px rgba(235, 199, 199, 0.3)
+}
+
+#limite h1{
+  font-size: 40px;
+  color: #ffffff;
+  font-family: 'Courier New', monospace;
+  font-weight: bolder;
+}
+
+#box-transferencia div{
+  background-color: rgba(255, 255, 255, 0.882);
+  border-radius: 20px;
+  padding: 40px 40px 40px 40px;
+  margin-top: 20px;
+  box-shadow: 5px 5px 10px rgba(164, 164, 164, 0.3);
+}
+
+#box-transferencia h3{
+  margin-bottom: 20px;
+}
+
+#box-transferencia input{
+  margin-bottom: 10px;
+}
+
+#box-transferencia button{
+  margin-top: 10px;
+}
+
+#saldo-atual:hover{
+  background-color: #cfddbb;
+}
+
+#limite:hover{
+  background-color: #fbe383;
+}
+
+
+/*--------------------------------------
+            Plano de Fundo
+  --------------------------------------*/
+
+  .gradient {
+    width: 100vw;
+    background: linear-gradient(90deg, #8ea471, #77a8c2, #b667c2, #ba5f5f);
+    background-size: 600%;
+    animation: colors 30s ease infinite;
+  }
+
+  @keyframes colors {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  @media (max-width: 1000px) {
+    .text {
+      font-size: 1.5rem;
+      padding: 1rem 2rem;
+    }
+  }

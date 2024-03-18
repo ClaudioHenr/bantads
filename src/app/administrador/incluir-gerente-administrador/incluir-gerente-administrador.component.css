@@ -1,0 +1,109 @@
+/*--------------------------------------
+            Navbar
+  --------------------------------------*/
+
+
+  header{
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0px 100px;
+    display: flex;
+    justify-content: space-between;
+    background: transparent;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(50px);
+  }
+  
+  header .logo{
+    font-size: 40px;
+    color: #e1b918;
+    font-family: 'Courier New', monospace;
+    font-weight: bolder;
+    text-decoration: none;
+  }
+  
+  .nav-itens{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .nav-item{
+    list-style: none;
+    margin-left: 20px;
+  }
+  
+  .nav-item a{
+    text-decoration: none;
+    padding: 6px 15px;
+    color: #ffffff;
+    border-radius: 20px;
+  }
+  
+  .nav-item a:hover, 
+  .nav-item a.ativo{
+    background: #b0900f;
+    color: rgb(255, 255, 255);
+  }
+
+  /*--------------------------------------
+            gerente-menu
+  --------------------------------------*/
+  
+body{
+  background-color: #f1f3f3 !important;
+}
+
+#caixa-administrador h1{
+  font-size: 30px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  color: #414141;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#caixa-alterar-gerente{
+  background-color: rgba(255, 255, 255, 0.882);
+  border-radius: 20px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 5px 5px 10px rgba(164, 164, 164, 0.5);
+}
+
+#caixa-alterar-gerente input{
+  margin-top: 3px;
+  margin-bottom: 10px;
+}
+
+/*--------------------------------------
+            Plano de Fundo
+  --------------------------------------*/
+
+  .gradient {
+    width: 100vw;
+    background: linear-gradient(90deg, #8ea471, #77a8c2, #b667c2, #ba5f5f);
+    background-size: 600%;
+    animation: colors 30s ease infinite;
+  }
+
+  @keyframes colors {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  @media (max-width: 1000px) {
+    .text {
+      font-size: 1.5rem;
+      padding: 1rem 2rem;
+    }
+  }
