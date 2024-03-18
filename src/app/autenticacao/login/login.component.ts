@@ -2,7 +2,8 @@ import { Component, ViewChild } from '@angular/core';
 import { FormsModule, NgForm, ReactiveFormsModule } from '@angular/forms';
 import { LoginService } from '../services/login.service';
 import { Router, RouterLink } from '@angular/router';
-import { autenticacao } from '../../shared/models/autenticacao.model';
+//comentado
+//import { autenticacao } from '../../shared/models/autenticacao.model';
 
 @Component({
   selector: 'app-login',
@@ -21,14 +22,16 @@ import { autenticacao } from '../../shared/models/autenticacao.model';
 export class LoginComponent {
   @ViewChild('loginForm') loginForm!: NgForm
 
-  auth: autenticacao = new autenticacao()
+  //comentado
+  //auth: autenticacao = new autenticacao()
 
   constructor(private loginService: LoginService, private route: Router) { }
 
   submitLogin() {
-    this.loginService.sendDataToLogin(this.auth)
+    //comentado
+    //this.loginService.sendDataToLogin(this.auth)
 
-    //this.route.navigate(['/'])
+    this.route.navigate(['/'])
   }
 
 }

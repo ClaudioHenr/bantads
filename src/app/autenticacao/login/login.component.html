@@ -4,24 +4,24 @@
 
         <!--imagem-->
         <div id="login-div-img" class="col-6 side-image">
-            <img src="../../../assets/bantads-login.png" alt="bantads-login">
+            <img src="/assets/bantads-login.png" alt="bantads-login">
         </div>
 
         <!--formulario-->
         <div class="col-6" >
             <!--Logo-->
-            <h1><img src="../../../assets/icon.png" alt="icon">anTads</h1>
+            <h1><img src="/assets/icon.png" alt="icon">anTads</h1>
                 <!--Email-->
                 <label>Email</label>
                 <input type="email" class="form-control" placeholder="Email" 
                 name="email"
-                [(ngModel)]="auth.login"
+                
                 required>
                 <!--Senha-->
                 <label>Senha</label>
                 <input type="password" class="form-control" placeholder="Senha" 
                 name="senha"
-                [(ngModel)]="auth.senha"
+                
                 required>
                 <!--Entrar-->
                 <button type="button" class="btn btn-primary" (click)="submitLogin()">Entrar</button>
