@@ -17,18 +17,16 @@ import { RouterLink } from '@angular/router';
   styleUrl: './login.component.css'
 })
 export class LoginComponent {
-  loginForm : FormGroup
+  @ViewChild('loginForm') loginForm!: NgForm
 
-  constructor(private loginService: LoginService) {
-    this.loginForm = new FormGroup({
-      email: new FormControl('', [Validators.required, Validators.email]),
-      password: new FormControl('', [Validators.required])
-    })
-  }
+  auth: autenticacao = new autenticacao()
 
-  submitLoginForm() {
-    console.log(this.loginForm.value)
-    this.loginService.sendDataToLogin(this.loginForm.value.email, this.loginForm.value.password)
+  constructor(private loginService: LoginService, private route: Router) { }
+
+  submitLogin() {
+    this.loginService.sendDataToLogin(this.auth)
+
+    //this.route.navigate(['/'])
   }
 
 }
