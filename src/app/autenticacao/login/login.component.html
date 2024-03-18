@@ -1,20 +1,33 @@
-<div class="d-flex justify-content-center">
-    <div class="card w-50">
-        <div class="card-header">
-            <h3>Login</h3>
+<div id="login" class="container main d-flex align-items-center">
+    <!--formulário login-->
+    <form class="row" action="" method="post">
+
+        <!--imagem-->
+        <div id="login-div-img" class="col-6 side-image">
+            <img src="../../../assets/bantads-login.png" alt="bantads-login">
         </div>
-        <div class="card-body">
-            <form [formGroup]="loginForm" action="#" method="post" id="loginForm">
-                <label for="emailInput" class="form-label">Email</label>
-                <input type="email" formControlName="email" class="form-control" id="emailInput">
-                <label for="passwordInput" class="form-label">Senha</label>
-                <input type="password" formControlName="password" class="form-control" id="passwordInput">
-            </form>
+
+        <!--formulario-->
+        <div class="col-6" >
+            <!--Logo-->
+            <h1><img src="../../../assets/icon.png" alt="icon">anTads</h1>
+                <!--Email-->
+                <label>Email</label>
+                <input type="email" class="form-control" placeholder="Email" 
+                name="email"
+                [(ngModel)]="auth.login"
+                required>
+                <!--Senha-->
+                <label>Senha</label>
+                <input type="password" class="form-control" placeholder="Senha" 
+                name="senha"
+                [(ngModel)]="auth.senha"
+                required>
+                <!--Entrar-->
+                <button type="button" class="btn btn-primary" (click)="submitLogin()">Entrar</button>
+                <!--Cadastrar-->
+                <a href="#" [routerLink]="['/autocadastro']"><button type="button" class="btn btn-outline-secondary">Cadastrar</button></a>
         </div>
-        <div class="card-footer d-flex flex-column align-items-center">
-            <button class="btn btn-outline-primary w-50" (click)="submitLoginForm()" [disabled]="!loginForm.valid">Login</button>
-            <br>
-            <p>Não possui um cadastro? Cadastre-se clicando <a href="#" [routerLink]="['/autocadastro']">aqui</a></p>
-        </div>
-    </div>
+        
+    </form>
 </div>
