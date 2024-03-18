@@ -15,13 +15,13 @@
                 <label>Email</label>
                 <input type="email" class="form-control" placeholder="Email" 
                 name="email"
-                
+                [(ngModel)]="auth.login"
                 required>
                 <!--Senha-->
                 <label>Senha</label>
                 <input type="password" class="form-control" placeholder="Senha" 
                 name="senha"
-                
+                [(ngModel)]="auth.senha"
                 required>
                 <!--Entrar-->
                 <button type="button" class="btn btn-primary" (click)="submitLogin()">Entrar</button>

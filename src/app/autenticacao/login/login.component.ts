@@ -28,7 +28,7 @@ export class LoginComponent {
   submitLogin() {
     this.loginService.sendDataToLogin(this.auth)
 
-    this.route.navigate(['/'])
+    //this.route.navigate(['/'])
   }
 
 }

@@ -12,7 +12,8 @@ export class LoginService {
 
   constructor(private http: HttpClient) { }
 
-  async sendDataToLogin(auth: autenticacao) {
+  sendDataToLogin(auth: autenticacao) {
+    console.log(auth.login, auth.senha)
     const data = {
       email: auth.login, 
       senha: auth.senha
