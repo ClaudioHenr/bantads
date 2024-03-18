@@ -1,87 +1,139 @@
-<div class="container">
+<div id="cadastro" class="container">
 
-    <div class="left-cadastro">
-        <img class="logo-cadastro" src="../../../assets/bantads-img.png" />
-        <h1 class="text-cadastro">Venha fazer parte do Internet banking do TADS</h1>
+    <!--Logo-->
+    <h1 class="col-12"><img src="../../../assets/icon.png" alt="icon">anTads</h1>
+    <!--Titulo-->
+    <h2>Cadastro</h2>
 
-    </div>
+    <!--formulario-->
+    <form class="row" action="" method="post">    
+        <!--Nome-->
+        <div class="form-group col-6">
+            <label>Nome</label>
+            <input type="text" class="form-control" placeholder="Nome"
+            name="nome"
+            [(ngModel)]="client.nome"
+            required>
+        </div>
 
+        <!--CPF-->
+        <div class="form-group col-6">
+            <label>CPF</label>
+            <input type="text" class="form-control" placeholder="CPF" 
+            name="cpf"
+            [(ngModel)]="client.cpf"
+            required>
+        </div>
 
-    <div class="right-cadastro">
-        <form action="" method="post">
-            <div class="card">
-                <div class="card-header">
-                    <h3>Cadastro de Cliente</h3>
-                </div>
-                
-                
-                <div class="card-body">
-                    <form action="#" method="post" id="loginForm">
-                        <label for="nameInput" class="form-label">Nome</label>
-                        <input type="text" formControlName="name" class="form-control"
-                        [(ngModel)]="client.nome"
-                        required
-                        >
+        <!--Email-->
+        <div class="form-group col-6">
+            <label>Email</label>
+            <input type="email" class="form-control" placeholder="Email" 
+            name="email"
+            [(ngModel)]="client.email"
+            required>
+        </div>
+        
+        <!--Telefone-->
+        <div class="form-group col-6">
+            <label>Telefone</label>
+            <input type="text" class="form-control" placeholder="Telefone" 
+            name="telefone"
+            [(ngModel)]="client.telefone"
+            required>
+        </div>
+
+        <!--Endereço-->
+        <div class="form-group col-6">
+            <label for="inputState">Tipo</label>
+            <select id="inputState" class="form-control">
+                <option selected>Rua</option>
+                <option>Avenida</option>
+                <option>outros...</option>
+            </select>
+        </div>
+
+        <!--Logadouro-->
+        <div class="form-group col-6">
+            <label>Logadouro</label>
+            <input type="text" class="form-control" placeholder="Logadouro" 
+            name="logradouro"
+            [(ngModel)]="address.logradouro"
+            required>
+        </div>
+
+        <!--Número-->
+        <div class="form-group col-6">
+            <label>Número</label>
+            <input type="number" class="form-control" placeholder="Número" 
+            name="numero"
+            [(ngModel)]="address.numero"
+            required>
+        </div>
+
+        <!--Complemento-->
+        <div class="form-group col-6">
+            <label>Complemento</label>
+            <input type="text" class="form-control" placeholder="Complemento" 
+            name="complemento"
+            [(ngModel)]="address.complemento"
+            required>
+        </div>
+
+        <!--CEP-->
+        <div class="form-group col-6">
+            <label>CEP</label>
+            <input type="text" class="form-control" placeholder="CEP" 
+            name="cep"
+            [(ngModel)]="address.CEP"
+            required>
+        </div>
+
+        <!--Estado-->
+        <div class="form-group col-2">
+            <label>Estado</label>
+            <input type="text" class="form-control" placeholder="Estado" 
+            name="estado"
+            [(ngModel)]="address.estado"
+            required>
+        </div>
+
+        <!--Cidade-->
+        <div class="form-group col-4">
+            <label>Cidade</label>
+            <input type="text" class="form-control" placeholder="Cidade" 
+            name="cidade"
+            [(ngModel)]="address.cidade"
+            required>
+        </div>
+
+        <!--Salario-->
+        <div class="form-group col-6">
+            <label>Salario</label>
+            <input type="number" class="form-control" placeholder="R$" 
+            name="Salario"
+            [(ngModel)]="client.salario"
+            required>
+        </div>
+
+        <!--Senha-->
+        <div class="form-group col-6">
+            <label>Senha</label>
+            <input type="password" class="form-control" placeholder="Senha" 
+            name="senha"
+            [(ngModel)]="client.senha"
+            required>
+        </div>
+
+        <!--Cadastrar-->
+        <div class="form-group col-2">    
+            <button type="button" class="btn btn-primary" (click)="submitRegister()">Cadastrar</button>
+        </div>
+        
+        <!--Cancelar-->
+        <div class="form-group col-2">
+            <a href="#" [routerLink]="['/login']"><button type="button" class="btn btn-outline-secondary">Cancelar</button></a>
+        </div>
+    </form>
     
-                        <label for="emailInput" class="form-label">Email</label>
-                        <input type="email" formControlName="email" class="form-control"
-                        [(ngModel)]="client.email"
-                        required
-                        >
-    
-                        <label for="cpfInput" class="form-label">CPF</label>
-                        <input type="text" formControlName="cpf" class="form-control"
-                        [(ngModel)]="client.cpf"
-                        required
-                        >
-    
-                        <label for="enderecoInput" class="form-label">Endereço</label>
-                        <input type="text" formControlName="address" class="form-control"
-                        [(ngModel)]="address.endereco"
-                        required
-                        >
-    
-                        <label for="typeInput" class="form-label">Tipo</label>
-                        <input type="text" formControlName="type" class="form-control"
-                        placeholder="Rua ou Avenida"
-                        [(ngModel)]="address.tipo"
-                        required
-                        >
-                        <div>
-                            <label for="logradouro">Logradouro</label>
-                            <input type="text" formControlName="logradouro" class="form-control"
-                            [(ngModel)]="address.logradouro"
-                            >
-                        </div>
-                        <div>
-                            <label for="numero">Número</label>
-                            <input type="number" formControlName="numberHome" class="form-control"
-                            [(ngModel)]="address.numero"
-                            >
-                        </div>
-    
-                        <label for="phoneInput" class="form-label">Telefone</label>
-                        <input type="number" formControlName="phone" class="form-control"
-                        [(ngModel)]="client.telefone"
-                        >
-    
-                        <label for="salaryInput" class="form-label">Salario</label>
-                        <input type="number" formControlName="salary" class="form-control"
-                        [(ngModel)]="client.salario"
-                        >
-    
-                        <label for="passwordInput" class="form-label">Senha</label>
-                        <input type="password" formControlName="password" class="form-control"
-                        [(ngModel)]="client.senha"
-                        >
-                    </form>
-                </div>
-    
-    
-                <div class="card-footer">
-                    <button class="btn btn-success" (click)="submitRegister()">Cadastrar</button>
-                </div>
-            </div>
-        </form>
-    </div>
 </div>
