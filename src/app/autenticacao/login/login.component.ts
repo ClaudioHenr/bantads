@@ -26,8 +26,14 @@ export class LoginComponent {
   constructor(private loginService: LoginService, private route: Router) { }
 
   submitLogin() {
-    this.loginService.sendDataToLogin(this.auth)
-
+    //this.loginService.sendDataToLogin(this.auth)
+    if (this.auth.login == "ADMIN" && this.auth.senha == "ADMIN") {
+      this.route.navigate(['telainicialadmin'])
+    } else if (this.auth.login == "GERENTE" && this.auth.senha == "GERENTE") {
+      this.route.navigate(['telainicialgerente'])
+    } else if (this.auth.login == "CLIENTE" && this.auth.senha == "CLIENTE") {
+      this.route.navigate(['telainicial'])
+    }
     //this.route.navigate(['/'])
   }
 
