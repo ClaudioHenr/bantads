@@ -8,7 +8,7 @@ export const verificarAdministradorGuard: CanActivateFn = (route, state) => {
   canActivate(): boolean {
 
     //se o usuário for um gerente, irá permitir o acesso 
-    if (this.authService.isGerente()) {
+    if (this.authServicegit .isGerente()) {
       return true;
 
     } else {
