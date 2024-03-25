@@ -1,34 +1,24 @@
-<!-- <h2 mat-dialog-title>Realizar Transação</h2>
+<h2 mat-dialog-title>Realizar Transação</h2>
 <mat-dialog-content>
     <mat-form-field>
         <mat-label>Tipo de Transação</mat-label>
-        <mat-select [(ngModel)]="selectedTransactionType">
-            <mat-option value="saque">Saque</mat-option>
-            <mat-option value="deposito">Depósito</mat-option>
-            <mat-option value="transferencia">Transferência</mat-option>
-        </mat-select>
+        <!-- <mat-select>
+                <mat-option>Saque</mat-option>
+                <mat-option>Depósito</mat-option>
+                <mat-option value="transferencia">Transferência</mat-option>
+            </mat-select> -->
     </mat-form-field>
 
     <mat-form-field>
-        <input matInput type="number" placeholder="Valor" [(ngModel)]="amount">
+        <input matInput type="number" placeholder="Valor">
     </mat-form-field>
 
     <mat-form-field *ngIf="selectedTransactionType === 'transferencia'">
-        <input matInput type="text" placeholder="Conta de Destino" [(ngModel)]="destinationAccount">
+        <input matInput type="text" placeholder="Conta de Destino">
     </mat-form-field>
 </mat-dialog-content>
 
 <mat-dialog-actions align="end">
     <button mat-button (click)="onClose()">Cancelar</button>
     <button mat-button color="primary" (click)="onConfirm()">Confirmar</button>
-</mat-dialog-actions> -->
-<h2 mat-dialog-title>Hi </h2>
-<mat-dialog-content>
-    <p>What's your favorite animal?</p>
-    <mat-form-field>
-        <mat-label>Favorite Animal</mat-label>
-    </mat-form-field>
-</mat-dialog-content>
-<mat-dialog-actions>
-
 </mat-dialog-actions>

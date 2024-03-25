@@ -39,4 +39,7 @@ export class TransacaoComponent {
   openDialog() {
     this.dialog.open(TransacaoComponent);
   }
+
+  onConfirm() {}
+  onClose() {}
 }
