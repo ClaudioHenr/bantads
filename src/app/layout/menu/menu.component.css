@@ -1,0 +1,50 @@
+/*--------------------------------------
+            Navbar
+  --------------------------------------*/
+
+
+  header{
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0px 100px;
+    display: flex;
+    justify-content: space-between;
+    background: transparent;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(50px);
+  }
+  
+  header .logo{
+    font-size: 40px;
+    color: #e1b918;
+    font-family: 'Courier New', monospace;
+    font-weight: bolder;
+    text-decoration: none;
+  }
+  
+  .nav-itens{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .nav-item{
+    list-style: none;
+    margin-left: 20px;
+  }
+  
+  .nav-item a{
+    text-decoration: none;
+    padding: 6px 15px;
+    color: #ffffff;
+    border-radius: 20px;
+  }
+  
+  .nav-item a:hover, 
+  .nav-item a.ativo{
+    background: #b0900f;
+    color: rgb(255, 255, 255);
+  }
